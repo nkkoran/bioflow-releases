@@ -1,0 +1,15 @@
+name: An idea or something missing
+description: Something you wanted to do and couldn't, or that could be easier.
+labels: [idea]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What you wanted to do
+      description: The analysis or task, and where in the app you looked for it.
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: What you do today instead

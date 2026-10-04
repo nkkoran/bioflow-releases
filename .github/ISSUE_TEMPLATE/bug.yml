@@ -1,0 +1,34 @@
+name: Something went wrong
+description: A bug, a crash, an error message, or a result that looks wrong.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Issues here are public. Never attach data files, analysis logs or anything with people's information in it.
+  - type: input
+    id: version
+    attributes:
+      label: BioFlow Studio version
+      description: On a Mac, BioFlow Studio ▸ About BioFlow Studio; elsewhere, the name of the file you downloaded.
+      placeholder: 0.2.0-beta.1
+    validations:
+      required: true
+  - type: dropdown
+    id: system
+    attributes:
+      label: Your computer
+      options: [Mac, Windows, Linux]
+    validations:
+      required: true
+  - type: input
+    id: cluster
+    attributes:
+      label: The cluster, if one was involved
+      placeholder: Rorqual, Narval, This computer…
+  - type: textarea
+    id: what
+    attributes:
+      label: What you did, what you expected, and what happened instead
+      description: Step by step, as far as you remember. A screenshot helps.
+    validations:
+      required: true
