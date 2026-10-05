@@ -42,7 +42,7 @@ Once you're connected, the top right shows the cluster's name in green, and the 
 
 **Options in the dialog:**
 - **Remember on this computer** keeps your password in the system keychain, encrypted.
-- **Stay signed in between app restarts** keeps one sign-in for 8 hours after it was last used, so Duo asks less often. It uses this computer's OpenSSH. To end it early, open the connection menu at the top right and choose **Sign out of …**. On Windows, leave it off (see the known issues).
+- **Stay signed in between app restarts** keeps one sign-in for 8 hours after it was last used, so Duo asks less often. It uses this computer's OpenSSH. To end it early, open the connection menu at the top right and choose **Sign out of …**. Not on Windows (see the known issues).
 - **More options** sets the SSH port and the folder the file list opens in.
 
 **What signing in does on the cluster:** it reads your Slurm account, the modules the cluster offers and the queue. It installs nothing. BioFlow writes on the cluster only when you act:

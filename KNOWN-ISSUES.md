@@ -33,10 +33,10 @@ These are problems we know about in the current beta, each with what to do meanw
 - **Who it affects:** Windows.
 - **What to do:** run on a cluster.
 
-**"Stay signed in between app restarts" doesn't work.**
-- **What happens:** the switch is shown, but connecting with it on fails: "OpenSSH ControlPersist transport is currently supported on macOS and Linux." The `bioflow` command line signs in only through it, so it can't sign in on Windows either.
+**No "Stay signed in between app restarts".**
+- **What happens:** staying signed in uses OpenSSH's ControlPersist, which Windows' OpenSSH lacks, so the switch isn't offered and Duo asks at each sign-in. The `bioflow` command line signs in only through a kept sign-in, so it can't sign in on Windows.
 - **Who it affects:** Windows.
-- **What to do:** leave the switch off. Duo then asks at each sign-in.
+- **What to do:** keep the app open between analyses, so one sign-in lasts.
 
 **A local folder of chromosomes isn't recognised as a set.**
 - **What happens:** for files on this computer, chromosome numbers are read from names split at `/`, which Windows paths don't use. A folder per chromosome on this computer is then not seen as one set.
