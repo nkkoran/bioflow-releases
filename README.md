@@ -6,6 +6,9 @@ This repository holds its releases and its issues. The code is elsewhere.
 
 **It is a beta.** Expect rough edges, and please tell us about them (below).
 
+- **[Getting started](GUIDE.md):** sign in, pick your files, run a GWAS and read its results, in about 15 minutes. It also says what the app sends where.
+- **[Known issues](KNOWN-ISSUES.md):** what doesn't work yet, and what to do instead.
+
 ## Download
 
 Open the [latest release](https://github.com/nkkoran/bioflow-releases/releases) and download the file for your computer:
@@ -20,32 +23,24 @@ The `.zip`, `.yml` and `.blockmap` files are what the app's updater reads: you d
 
 ## The first time it opens
 
-The betas are not signed yet, so your computer can't check who made them and will stop the first launch. This is expected.
+**Mac:** the app is signed and notarized by Apple, so it opens normally.
 
-**Mac:**
-1. Double-click BioFlow Studio. macOS refuses to open it.
-2. Open **System Settings → Privacy & Security** and scroll to Security.
-3. Next to "BioFlow Studio was blocked", click **Open Anyway**, then confirm.
+**Windows:** the app is not signed yet. SmartScreen says "Windows protected your PC": click **More info**, then **Run anyway**. You do this once per version.
 
-You do this once per version. If macOS says the app is **"damaged and can't be opened"**, run this in Terminal, then open it again:
-
-```bash
-xattr -cr "/Applications/BioFlow Studio.app"
-```
-
-The command removes macOS's download quarantine from this one app. Only run it on an app you downloaded from this page.
-
-**Windows:** SmartScreen says "Windows protected your PC". Click **More info**, then **Run anyway**.
+**Linux:** no extra step.
 
 ## Updates
 
-- **Windows and the Linux AppImage** download a new version by themselves and install it when you next quit and reopen the app.
-- **Mac** can't install updates into an unsigned app. When a new version is out, the app says so, and **Download** opens its page here. Replace the app in Applications with the new one, then repeat the first-launch steps.
+The app checks for a new version each time it opens; **Check for Updates** (in the BioFlow Studio menu on a Mac, the Help menu elsewhere) checks now.
+- **Mac, Windows and the Linux AppImage** download a new version by themselves and install it when you next quit and reopen the app.
+- **The Linux `.deb`:** download the new `.deb` from the releases page and install it.
 
 ## Report a bug or suggest something
 
-[Open an issue](https://github.com/nkkoran/bioflow-releases/issues/new/choose). Say:
-- the version (on a Mac, BioFlow Studio ▸ About BioFlow Studio; elsewhere, the name of the file you downloaded) and your operating system;
+In the app, choose **Help ▸ Report a Problem…**. It writes a report you can read first (no data, and paths, host names and user names taken out), then opens a new issue here for you to attach it to. The [guide](GUIDE.md#when-something-goes-wrong) says more.
+
+Or [open an issue](https://github.com/nkkoran/bioflow-releases/issues/new/choose) yourself. Say:
+- the version (**Settings ▸ About** in the app) and your operating system;
 - what you did, what you expected and what happened instead.
 
 A screenshot helps. **Never attach data files, logs from your analyses or anything with people's information in it.** Issues here are public.
@@ -58,3 +53,5 @@ BioFlow Studio runs your analyses with your own account on the clusters you sign
 - trait words (for example, Ensembl for the genes near a peak, the GWAS Catalog for a trait's studies).
 
 Mendelian randomization's clumping by the OpenGWAS server, when you choose it, sends the candidate variants' IDs and p-values.
+
+The app has no telemetry, analytics or crash reporting. Everything it sends, and when, is listed in the guide's [What BioFlow sends where](GUIDE.md#what-bioflow-sends-where).
