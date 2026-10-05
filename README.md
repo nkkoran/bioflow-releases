@@ -37,7 +37,7 @@ The app checks for a new version each time it opens; **Check for Updates** (in t
 
 ## Report a bug or suggest something
 
-In the app, choose **Help ▸ Report a Problem…**. It shows you the whole report first (no data, and paths, host names and user names taken out), then sends it to the developers privately, opens an email to them, or opens a public issue here for you to attach it to. The [guide](GUIDE.md#when-something-goes-wrong) says more.
+In the app, choose **Help ▸ Report a Problem…**. It shows you the whole report first (no data, and paths, host names and user names taken out), then opens a new issue here for you to attach it to. The [guide](GUIDE.md#when-something-goes-wrong) says more.
 
 Or [open an issue](https://github.com/nkkoran/bioflow-releases/issues/new/choose) yourself. Say:
 - the version (**Settings ▸ About** in the app) and your operating system;
