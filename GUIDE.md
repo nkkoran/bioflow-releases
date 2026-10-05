@@ -149,17 +149,17 @@ Results hold summary statistics, never your phenotype rows. A file of individual
 Where there is one change that would let it run, a button makes it and runs the step again, for example **Memory 8 → 16 GB, and re-run**. **Take me there** opens the setting it names, and changes nothing until you do. **Re-run from here** runs that step and the steps after it again; the steps before it are not run again. **Debug this step** opens a shell on a compute node, in the Terminal tab, to try the step's commands by hand.
 
 **Tell us.** Choose **Help ▸ Report a Problem…**:
-1. It asks what you did and what happened.
-2. It writes a plain-text report: the app's version, your computer's system and the app's recent log. Paths, host names and user names are taken out, and it holds no data from your files. Open it and read it before you send it.
-3. **Open on GitHub** opens a new issue on this repository, with your description filled in, and shows the report file. Drag the file into the issue, then submit it.
-
-You need a GitHub account to file an issue. **Issues here are public:** never paste data, file contents or anything about people into one. For a question that isn't for a public page, ask the person who invited you.
+1. Say what you did, what you expected and what happened instead. **Include BioFlow's log of the last 24 hours** is ticked; leave it ticked unless you'd rather not.
+2. The dialog shows **exactly what the file holds**: the app's version, your computer's system, the app's state (steps, statuses and settings, not their values) and the log. Paths, host names, user names, email addresses and keys are taken out, and nothing from your files, previews or jobs' output is in it. Read it first; nothing leaves your computer until you choose one of these:
+   - **Send to BioFlow's developers** sends it now, privately, and gives you a reference such as **R-12**. Only the developers can read it.
+   - **Email it instead** writes the report into Downloads and opens your email app with a message to the developers. Attach the file to send it whole. Use it when Send fails.
+   - **Post a public GitHub issue** writes the report into Downloads and opens a new issue on this repository, with your description filled in. Drag the file into the issue, then submit it. You need a GitHub account. **Anyone on the internet can read it:** never paste data, file contents or anything about people into one.
 
 If the app itself won't start or freezes, file an issue by hand from [the issues page](https://github.com/nkkoran/bioflow-releases/issues/new/choose). Give the version (**Settings ▸ About**, or **BioFlow Studio ▸ About BioFlow Studio** on a Mac) and your operating system.
 
 ## What BioFlow sends where
 
-**Your data stays on your cluster.** BioFlow signs in with your own account and runs your jobs there. Your genotypes, phenotypes and results are read where they are, over your SSH connection, and nothing is uploaded to us. BioFlow has no telemetry, no analytics and no crash reporting: crash reports stay on this computer. It has no server of its own.
+**Your data stays on your cluster.** BioFlow signs in with your own account and runs your jobs there. Your genotypes, phenotypes and results are read where they are, over your SSH connection, and nothing is uploaded to us. BioFlow has no telemetry, no analytics and no crash reporting: crash reports stay on this computer. Its only server is the report relay, which receives a report only when you press **Send to BioFlow's developers**.
 
 What does leave, and when:
 
@@ -197,4 +197,4 @@ What does leave, and when:
 
 **Links you click** (documentation, CCDB, a study's page) open in your web browser.
 
-**Bug reports** are written to a file on this computer. Nothing is sent until you open the GitHub issue and attach the file yourself.
+**Problem reports** are written to a file on this computer, and nothing is sent until you choose how. **Send to BioFlow's developers** posts the report you read, with what you wrote, the version and your system, to BioFlow's relay (a Cloudflare Worker), which files it in a private GitHub repository only the developers can read. **Email it instead** and **Post a public GitHub issue** send nothing themselves: you attach the file.
