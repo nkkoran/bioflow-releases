@@ -1,6 +1,6 @@
 # Known issues
 
-These are problems we know about in the current beta (0.2.0-beta.1), each with what to do meanwhile. If you hit something that isn't here, please [open an issue](https://github.com/nkkoran/bioflow-releases/issues/new/choose), or use **Help ▸ Report a Problem…** in the app.
+These are problems we know about in the current beta, each with what to do meanwhile. If you hit something that isn't here, please [open an issue](https://github.com/nkkoran/bioflow-releases/issues/new/choose), or use **Help ▸ Report a Problem…** in the app.
 
 ## Runs
 
