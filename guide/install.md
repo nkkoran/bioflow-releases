@@ -21,7 +21,7 @@ The `.zip`, `.yml` and `.blockmap` files are what the app's updater reads: you d
 
 ## The first window
 
-![The first window: What do you want to do?, the connection strip, the search box and the gallery of analyses](install-first-window.png)
+![The first window, signed in: What do you want to do?, the connection strip, the search box and the gallery of analyses](install-first-window.png)
 
 The first window asks **What do you want to do?**:
 - **The strip under it** says where analyses run. Before you sign in it says you sign in when you run, or now from **Not connected** at the top right. Once you are signed in it says **Connected to … · Slurm account …**.
